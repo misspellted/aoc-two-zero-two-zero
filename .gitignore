@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ================
+# Ignore virtual Python environments
+# ================
+.dev/
+
+# ================
+# Ignore IDE stuff
+# ================
+.vscode/
+
+# ================
+# Ignore configurationy things
+# ================
+config.py
