@@ -142,3 +142,14 @@ dmypy.json
 # Ignore configurationy things
 # ================
 config.py
+
+# ================
+# Ignore data sets
+# ================
+example.txt
+generated.txt
+
+# ================
+# Ignore debug output
+# ================
+output.txt
