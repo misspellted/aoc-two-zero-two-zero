@@ -1,9 +1,12 @@
 
+
 # Day 1 puzzle: https://adventofcode.com/2020/day/1
 # In broad terms, find the product of k numbers, where the sum of those numbers is a particular value.
 
+
 from functools import reduce
 from puzzles import Puzzle
+
 
 def dodge(index, array):
   # Get all the elements, except the one at the specified index.

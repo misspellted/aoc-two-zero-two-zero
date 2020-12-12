@@ -1,8 +1,11 @@
 
+
 # Day 2 puzzle: https://adventofcode.com/2020/day/2
 # In broad terms, count the passwords validated by the policy in place when created.
 
+
 from puzzles import Puzzle
+
 
 class PasswordRequirement:
   def meets(self, password):
@@ -45,6 +48,7 @@ class MinMaxLetter(PasswordRequirement):
     minimum, maximum = range.split("-")
     return MinMaxLetter(int(minimum), int(maximum), letter)
 
+
 class ExactlyOnePositioned(PasswordRequirement):
   def __init__(self, left, right, letter):
     # Since there is positioning, we must consider that possibility that
@@ -82,6 +86,7 @@ class ExactlyOnePositioned(PasswordRequirement):
     positions, letter = requirementText.split(" ")
     left, right = positions.split("-")
     return ExactlyOnePositioned(int(left), int(right), letter)
+
 
 class ZeroTwo(Puzzle):
   def __init__(self):
