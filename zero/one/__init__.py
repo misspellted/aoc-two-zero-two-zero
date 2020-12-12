@@ -1,6 +1,6 @@
 
 # Day 1 puzzle: https://adventofcode.com/2020/day/1
-# In broad terms, find the product of two numbers, where the sum of those numbers is a particular value.
+# In broad terms, find the product of k numbers, where the sum of those numbers is a particular value.
 
 from functools import reduce
 from puzzles import Puzzle
@@ -139,11 +139,11 @@ class ZeroOne(Puzzle):
   def one(self):
     # The first part of the puzzle is to find a pair of expenses that equals 2020.
     # In the data structure implemented, we reversed the direction, so we're looking
-    # for an objective of 0, with a depth of 2?
+    # for an objective of 0, with a depth of 2.
     return self.findAndMultiplyExpenses(2)
 
   def two(self):
-    # The first part of the puzzle is to find a triplet of expenses that equals 2020.
+    # The second part of the puzzle is to find a triplet of expenses that equals 2020.
     # In the data structure implemented, we reversed the direction, so we're [still] looking
     # for an objective of 0, but now with a depth of 3.
     return self.findAndMultiplyExpenses(3)

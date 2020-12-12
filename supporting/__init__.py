@@ -1,6 +1,7 @@
 
 # Provide common capabilities supporting solutions for the puzzle of the day.
 
+
 def linearDataFile(filePath):
   linearData = None
 
@@ -9,5 +10,11 @@ def linearDataFile(filePath):
 
   return linearData
 
+
 def asIntegers(linearData):
   return [int(line) for line in linearData]
+
+
+def trimmed(linearData):
+  return [str.strip(line) for line in linearData]
+
