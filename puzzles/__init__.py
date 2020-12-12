@@ -5,8 +5,6 @@ from supporting import linearDataFile
 
 
 class Puzzle:
-  OFFSETS = {'0': "zero", '1': "one", '2': "two"}
-
   def __init__(self, day):
     self.day = day
     self.data = None # I don't know if this is useful. TODO: Investigate if it can be removed.
@@ -26,11 +24,6 @@ class Puzzle:
 
   def use(self, data):
     self.data = data
-
-  def offset(self):
-    # WIP: Get the "offset" into the data directory for the data of the puzzle.
-    offsets = [Puzzle.OFFSETS[_] for _ in self.day]
-    return f"{str.join(sep, offsets)}"
 
   def one(self):
     raise NotImplementedError("Part 1 of the puzzle is not implemented. No star for you!")

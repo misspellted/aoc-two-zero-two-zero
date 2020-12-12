@@ -1,7 +1,7 @@
 
 
 from results import example, generated
-from zero.three import ZeroThree
+from one.two import OneTwo
 
 
 # Import the unit tests to be run every time the current day's puzzles are run.
@@ -10,9 +10,7 @@ from tests import *
 
 
 if __name__ == "__main__":
-  # The unit tests for ZeroThree are already included, so this is mainly just a placeholder
-  # for ZeroFour (or... a deviation, if I so choose, like OneSeven or TwoFive).
-  puzzle = ZeroThree()
+  puzzle = OneTwo()
 
   # Test with the example data in the puzzle's description.
   puzzle.use(puzzle.exampleData())
