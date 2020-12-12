@@ -19,6 +19,10 @@ class ZeroThree(Puzzle):
     return __file__ # This feels... evil! And I like it!
 
   def use(self, data):
+    # Confirm able to import data.
+    # for line in data:
+    #   print(line)
+
     # The incoming data, by default, is 'linear', or literally as the lines from the file.
     # May include line-ending whitespace characters... so, we're gonna trim any trailing,
     # or leading whitespace characters.

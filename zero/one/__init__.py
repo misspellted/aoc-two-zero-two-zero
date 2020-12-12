@@ -6,6 +6,7 @@
 
 from functools import reduce
 from puzzles import Puzzle
+from supporting import asIntegers
 
 
 def dodge(index, array):
@@ -101,9 +102,12 @@ class ZeroOne(Puzzle):
     self.tree = None
     self.targetSum = targetSum
 
-  def use(self, expenses):
+  def __puzzle__(self):
+    return __file__ # This feels... evil! And I like it!
+
+  def use(self, data):
     # Ensure the incoming data is numerically an integer in nature.
-    self.tree = ZOTree(self.targetSum, [int(expense) for expense in expenses])
+    self.tree = ZOTree(self.targetSum, asIntegers(data))
 
     # Grow the tree. Very inefficiently, in terms of storage and processing, of course!
     self.tree.grow()
@@ -150,3 +154,4 @@ class ZeroOne(Puzzle):
     # In the data structure implemented, we reversed the direction, so we're [still] looking
     # for an objective of 0, but now with a depth of 3.
     return self.findAndMultiplyExpenses(3)
+

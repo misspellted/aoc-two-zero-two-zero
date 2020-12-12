@@ -5,6 +5,7 @@
 
 
 from puzzles import Puzzle
+from supporting import trimmed
 
 
 class PasswordRequirement:
@@ -94,13 +95,18 @@ class ZeroTwo(Puzzle):
     #self.passwordPolicy = None # Eh... looks like P2 didn't introduce multiple requirements. Won't need this!
     self.data = None
 
-  def use(self, policyPasswordLines):
-    # Confirm able to import data.
-    # for policyPasswordLine in policyPasswordLines:
-    #   print(policyPasswordLine)
+  def __puzzle__(self):
+    return __file__ # This feels... evil! And I like it!
 
-    # Stash the data to be used.
-    self.data = policyPasswordLines
+  def use(self, data):
+    # Confirm able to import data.
+    # for line in data:
+    #   print(line)
+
+    # The incoming data, by default, is 'linear', or literally as the lines from the file.
+    # May include line-ending whitespace characters... so, we're gonna trim any trailing,
+    # or leading whitespace characters.
+    self.data = trimmed(data)
 
   # def validatePasswords(self):
   #   if self.passwordPolicy is None:
@@ -116,9 +122,10 @@ class ZeroTwo(Puzzle):
     # of the specified letter.
     count = 0
 
-    for policyPasswordLine in self.data:
-      policy, password = [str.strip(_) for _ in policyPasswordLine.split(":")] # Kinda assumes there will only be two fields...
-      count += 1 if MinMaxLetter.parse(policy).meets(password) else 0
+    if self.data: # TODO: Might want to invert this into raising an exception?
+      for policyPasswordLine in self.data:
+        policy, password = [str.strip(_) for _ in policyPasswordLine.split(":")] # Kinda assumes there will only be two fields...
+        count += 1 if MinMaxLetter.parse(policy).meets(password) else 0
 
     return count
 
@@ -127,9 +134,10 @@ class ZeroTwo(Puzzle):
     # where exactly only one of those positions can be the character required.
     count = 0
 
-    for policyPasswordLine in self.data:
-      policy, password = [str.strip(_) for _ in policyPasswordLine.split(":")] # Kinda assumes there will only be two fields...
-      count += 1 if ExactlyOnePositioned.parse(policy).meets(password) else 0
+    if self.data: # TODO: Might want to invert this into raising an exception?
+      for policyPasswordLine in self.data:
+        policy, password = [str.strip(_) for _ in policyPasswordLine.split(":")] # Kinda assumes there will only be two fields...
+        count += 1 if ExactlyOnePositioned.parse(policy).meets(password) else 0
 
     return count
 
