@@ -6,7 +6,7 @@ from supporting import linearDataFile
 
 class Puzzle:
   def __init__(self, day):
-    self.day = day
+    self.day = f"{day:02d}" if isinstance(day, int) else day
     self.data = None # I don't know if this is useful. TODO: Investigate if it can be removed.
 
   def __puzzle__(self):

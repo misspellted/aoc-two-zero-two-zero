@@ -1,7 +1,7 @@
 
 
 from results import example, generated
-from one.two import OneTwo
+from one.three import OneThree
 
 
 # Import the unit tests to be run every time the current day's puzzles are run.
@@ -10,7 +10,7 @@ from tests import *
 
 
 if __name__ == "__main__":
-  puzzle = OneTwo()
+  puzzle = OneThree()
 
   # Test with the example data in the puzzle's description.
   puzzle.use(puzzle.exampleData())

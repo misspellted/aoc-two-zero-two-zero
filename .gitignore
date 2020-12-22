@@ -155,6 +155,7 @@ generated.txt
 # Ignore debug output
 # ================
 output.txt
+lastOutput.txt
 
 # ================
 # Ignore results files, used to ensure previous
@@ -162,4 +163,10 @@ output.txt
 # ================
 results.py
 results.json
+
+# ================
+# Ignore generated state tracking
+# ================
+interrupted.txt
+lastInterrupted.txt
 
