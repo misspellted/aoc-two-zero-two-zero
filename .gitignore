@@ -143,30 +143,7 @@ dmypy.json
 # ================
 # Ignore configurationy things
 # ================
+# In the end, only held my AOC2020_CODE (proof of account), unused anywhere.
+# Will leave this on the ignore list.
 config.py
-
-# ================
-# Ignore data sets
-# ================
-example.txt
-generated.txt
-
-# ================
-# Ignore debug output
-# ================
-output.txt
-lastOutput.txt
-
-# ================
-# Ignore results files, used to ensure previous
-#   solutions generate the expected results.
-# ================
-results.py
-results.json
-
-# ================
-# Ignore generated state tracking
-# ================
-interrupted.txt
-lastInterrupted.txt
 

@@ -1,0 +1,65 @@
+
+
+{
+  "D01": {
+    "P1": {
+      "example": 514579,
+      "generated": 482811
+    },
+    "P2": {
+      "example": 241861950,
+      "generated": 193171814
+    }
+  },
+  "D02": {
+    "P1": {
+      "example": 2,
+      "generated": 517
+    },
+    "P2": {
+      "example": 1,
+      "generated": 284
+    }
+  },
+  "D03": {
+    "P1": {
+      "example": 7,
+      "generated": 176
+    },
+    "P2": {
+      "example": 336,
+      "generated": 5872458240
+    }
+  },
+  "D12": {
+    "P1": {
+      "example": 25,
+      "generated": 636
+    },
+    "P2": {
+      "example": 286,
+      "generated": 26841
+    }
+  },
+  "D13": {
+    "P1": {
+      "example": 295,
+      "generated": 3865
+    },
+    "P2": {
+      "example": 1068781,
+      "generated": 415579909629976
+    }
+  },
+  "D22": {
+    "P1": {
+      "example": 306,
+      "generated": 35562
+    },
+    "P2": {
+      "example": -1,
+      "generated": -1
+    }
+  }
+}
+
